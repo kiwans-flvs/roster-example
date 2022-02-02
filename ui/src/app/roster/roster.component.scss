@@ -1,0 +1,19 @@
+#content{
+
+    width: 60vw;
+    height: 70vh;
+    margin: 8vh auto 0;
+
+    .p-card-header {
+        padding: 1.25rem;
+    }
+
+    .failing td{
+        background-color: #ffe0e0;
+    }
+    
+    .danger td{
+        background-color: #ffffe0;
+    }
+}
+

@@ -1,0 +1,32 @@
+<div id="content">
+    <p-card>
+      <h2 class="text-center"><i class="pi pi-users" style="font-size: 2rem"></i> Course Roster</h2>
+      <ng-container *ngIf="roster$ | async as roster">
+        <p-table #rosterTable
+                [value]="roster">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Name</th>
+                  <th>Username</th>
+                  <th>School</th>
+                  <th>Grade</th>
+                  <th></th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-student>
+              <tr [ngClass]="{'failing': student.grade < '65', 'danger': (student.grade >= '65' && student.grade < '75')}">
+                  <td><a [routerLink]="['/profile', student.username]">{{student.firstName}} {{student.lastName}}</a></td>
+                  <td>{{student.username}}</td>
+                  <td>{{student.school}}</td>
+                  <td>{{student.grade}}</td>
+                  <td>
+                    <button type="button" pButton icon="pi pi-envelope" (click)="emailStudent(student)"></button>
+                  </td>
+              </tr>
+          </ng-template>
+        </p-table>
+      </ng-container>
+    </p-card>
+  </div>
+
+  <p-toast position="bottom-right"></p-toast>

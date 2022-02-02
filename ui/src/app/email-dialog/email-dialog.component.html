@@ -1,0 +1,5 @@
+<form (submit)="sendMessage()" [formGroup]="emailForm">
+    <p>To: <input id="float-input" type="text" pInputText formControlName="email" name="emailAddress" disabled="true"> </p>
+    <textarea pInputTextarea [rows]="5" [cols]="75" formControlName="message"></textarea>
+    <p class="text-right"><input type="submit" pButton value="Send Message"></p>
+</form>

@@ -1,0 +1,12 @@
+<div id="content">
+    <p-card>
+        <h2 class="text-center"><i class="pi pi-user" style="font-size: 2rem"></i> Student Profile</h2>
+        <ng-container *ngIf="student$ | async as student">
+            <p>Name: {{student.firstName}} {{student.lastName}}</p>
+            <p>Username: {{student.username}}</p>
+            <p>School: {{student.school}}</p>
+            <p>Current Grade: {{student.grade}}/100</p>
+            <app-student-contact [contact]="contact$ | async"></app-student-contact>
+        </ng-container>
+    </p-card>
+</div>
