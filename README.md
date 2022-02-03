@@ -1,5 +1,9 @@
 # Roster Example
 
+## Angular CLI
+You will need to have the Angular CLI installed globally on your system in order to run the Angular application
+`npm install -g @angular/cli`
+
 ## API
 ExpressJS API
 ### To initialize and run the application
