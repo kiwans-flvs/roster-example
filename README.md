@@ -49,7 +49,9 @@ So that I may find students more easily
 As an instructor  
 When I view my list of students  
 Then I should have a way to quickly view their contact information ( email and phone number ) without having to go to the profile page  
-So that I may reduce the number of clicks to view their contact information  
+So that I may reduce the number of clicks to view their contact information 
+
+You have full creative control on the solution to this request. There is an existing `StudentContactComponent` that can be utilized, or you may create your own solution utilizing data from the API. Use of PrimeNG components is encouraged, but not mandatory.
 
 ### Refactor #1
 As a developer  
